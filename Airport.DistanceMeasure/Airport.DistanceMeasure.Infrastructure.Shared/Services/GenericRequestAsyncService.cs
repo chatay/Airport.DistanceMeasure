@@ -39,7 +39,7 @@ namespace Airport.DistanceMeasure.Infrastructure.Shared.Services
             }
             catch (Exception ex)
             {
-                throw new InvalidOperationException(ex.Message);
+                throw new AirportException(ex.Message, ex.InnerException);
             }
 
         }

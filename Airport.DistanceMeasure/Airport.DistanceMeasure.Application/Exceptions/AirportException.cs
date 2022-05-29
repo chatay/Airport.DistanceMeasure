@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Airport.DistanceMeasure.Application.Exceptions
 {
     [Serializable()]
-    public class AirportException: Exception, ISerializable
+    public class AirportException: Exception
     {
         public AirportException()
         {
