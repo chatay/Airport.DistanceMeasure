@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Airport.DistanceMeasure.Application.DTOs
 {
-    class AirportDistanceDTO
+    public class AirportDistanceDTO
     {
-        public double Distance { get; set; }
+        public string Distance { get; set; }
     }
 }

@@ -25,10 +25,9 @@ namespace Airport.DistanceMeasure.API.Controllers
         }
 
         [HttpGet(Name ="GetDistanceBetweenAirports")]
-        public async Task<IActionResult> MeasureDistanceBetweenAirports([FromQuery] AirportIataCodesRequest airportIataCodesRequest)
+        public async Task<AirportDistanceDTO> MeasureDistanceBetweenAirports([FromQuery] AirportIataCodesRequest airportIataCodesRequest)
         {
-            await _airportDistanceMeasure.GetAirportDistance(airportIataCodesRequest, _configuration.BaseAddress.AbsoluteUri);
-            return Ok();
+            return await _airportDistanceMeasure.GetAirportDistance(airportIataCodesRequest, _configuration.BaseAddress.AbsoluteUri);
         }
     }
 }

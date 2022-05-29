@@ -9,6 +9,6 @@ namespace Airport.DistanceMeasure.Application.Interfaces
 {
     public interface IAirportDistanceMeasureService
     {
-        Task<AirportDTO> GetAirportDistance(AirportIataCodesRequest airportIataCodesRequest, string baseAddress);
+        Task<AirportDistanceDTO> GetAirportDistance(AirportIataCodesRequest airportIataCodesRequest, string baseAddress);
     }
 }
