@@ -11,7 +11,7 @@ namespace Airport.DistanceMeasure.Application.Validation.RegexValidator
 	{
 		public static bool IsValid(string iataCode)
 		{
-			return new Regex("^[A-Z]{3}$").IsMatch(iataCode);
+			return (!string.IsNullOrEmpty(iataCode) && iataCode.Length == 3 && iataCode.All(Char.IsLetter));
 		}
 	}
 }

@@ -1,3 +1,4 @@
+using Airport.DistanceMeasure.Application.Options;
 using Airport.DistanceMeasure.Application.Validation.FluentValidation;
 using Airport.DistanceMeasure.Infrastructure.Shared;
 using FluentValidation.AspNetCore;
@@ -32,6 +33,8 @@ namespace Airport.DistanceMeasure.API
             services.AddControllers();
             services.AddHttpClient();
             services.AddSharedInfrastructure();
+            services.Configure<AirportConfigurations>(Configuration.GetSection("AirportURLs"));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Airport.DistanceMeasure.API", Version = "v1" });

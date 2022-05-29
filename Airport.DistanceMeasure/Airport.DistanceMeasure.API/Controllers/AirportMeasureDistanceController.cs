@@ -1,7 +1,10 @@
 ﻿using Airport.DistanceMeasure.Application.DTOs;
 using Airport.DistanceMeasure.Application.Interfaces;
+using Airport.DistanceMeasure.Application.Options;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,16 +17,17 @@ namespace Airport.DistanceMeasure.API.Controllers
     public class AirportMeasureDistanceController : ControllerBase
     {
         private readonly IAirportDistanceMeasureService _airportDistanceMeasure;
-
-        public AirportMeasureDistanceController(IAirportDistanceMeasureService airportDistanceMeasure)
+        private readonly AirportConfigurations _configuration;
+        public AirportMeasureDistanceController(IAirportDistanceMeasureService airportDistanceMeasure, IOptions<AirportConfigurations> configuration)
         {
             _airportDistanceMeasure = airportDistanceMeasure;
+            _configuration = configuration.Value;
         }
 
         [HttpGet(Name ="GetDistanceBetweenAirports")]
         public async Task<IActionResult> MeasureDistanceBetweenAirports([FromQuery] AirportIataCodesRequest airportIataCodesRequest)
         {
-            await _airportDistanceMeasure.GetAirportDistance(airportIataCodesRequest);
+            await _airportDistanceMeasure.GetAirportDistance(airportIataCodesRequest, _configuration.BaseAddress.AbsoluteUri);
             return Ok();
         }
     }

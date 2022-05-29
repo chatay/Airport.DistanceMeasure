@@ -14,6 +14,7 @@ namespace Airport.DistanceMeasure.Infrastructure.Shared
         public static void AddSharedInfrastructure(this IServiceCollection services)
         {
             services.AddScoped<IAirportDistanceMeasureService, AirportDistanceMeasureService>();
+            services.AddScoped<IGetAirportsService, GenericRequestAsyncService>();
         }
     }
 }
