@@ -1,4 +1,5 @@
-﻿using Airport.DistanceMeasure.Application.Interfaces;
+﻿using Airport.DistanceMeasure.Application.DTOs;
+using Airport.DistanceMeasure.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -20,8 +21,9 @@ namespace Airport.DistanceMeasure.API.Controllers
         }
 
         [HttpGet(Name ="GetDistanceBetweenAirports")]
-        public async Task<IActionResult> MeasureDistanceBetweenAirports([FromBody] IEnumerable<int> iataCodes)
+        public async Task<IActionResult> MeasureDistanceBetweenAirports([FromQuery] AirportIataCodesRequest airportIataCodesRequest)
         {
+            await _airportDistanceMeasure.GetAirportDistance(airportIataCodesRequest);
             return Ok();
         }
     }

@@ -1,3 +1,6 @@
+using Airport.DistanceMeasure.Application.Validation.FluentValidation;
+using Airport.DistanceMeasure.Infrastructure.Shared;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,10 +30,14 @@ namespace Airport.DistanceMeasure.API
         {
 
             services.AddControllers();
+            services.AddHttpClient();
+            services.AddSharedInfrastructure();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Airport.DistanceMeasure.API", Version = "v1" });
             });
+            services.AddMvc()
+                    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IataCodesValidator>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

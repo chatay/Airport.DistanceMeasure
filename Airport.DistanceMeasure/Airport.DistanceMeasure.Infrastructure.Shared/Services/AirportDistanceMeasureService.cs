@@ -15,9 +15,9 @@ namespace Airport.DistanceMeasure.Infrastructure.Shared.Services
         public AirportDistanceMeasureService(ILogger<AirportDistanceMeasureService> logger, HttpClient httpClient) : base(logger, httpClient)
         {
         }
-        public Task<AirportDistanceDTO> GetAirportDistance(string fromIataCode, string toIataCode)
+        public Task<AirportDistanceDTO> GetAirportDistance(AirportIataCodesRequest airportIataCodesRequest)
         {
-            _logger.LogInformation("");
+            _logger.LogInformation($"GetAirportDistance request started. fromIataCode: {0}, toIataCode {1}" , airportIataCodesRequest.FromIataCode, airportIataCodesRequest.ToIataCode);
             throw new NotImplementedException();
         }
     }

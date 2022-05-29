@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Airport.DistanceMeasure.Application\Airport.DistanceMeasure.Application.csproj" />
+    <ProjectReference Include="..\Airport.DistanceMeasure.Infrastructure.Shared\Airport.DistanceMeasure.Infrastructure.Shared.csproj" />
   </ItemGroup>
 
 </Project>
