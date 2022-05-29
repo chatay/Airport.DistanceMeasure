@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.DistanceMeasure.API", "Airport.DistanceMeasure.API\Airport.DistanceMeasure.API.csproj", "{FADD86D1-267E-4D25-9418-5DE702A90C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.DistanceMeasure.API", "Airport.DistanceMeasure.API\Airport.DistanceMeasure.API.csproj", "{FADD86D1-267E-4D25-9418-5DE702A90C14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.DistanceMeasure.Application", "Airport.DistanceMeasure.Application\Airport.DistanceMeasure.Application.csproj", "{DB5AFBB2-145A-411E-A411-23ECD13812E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.DistanceMeasure.Application", "Airport.DistanceMeasure.Application\Airport.DistanceMeasure.Application.csproj", "{DB5AFBB2-145A-411E-A411-23ECD13812E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{21780340-66D9-4E08-A631-275C065641CD}"
 EndProject
@@ -13,9 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8118B4FB-6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CD17DF54-4738-4056-9A9C-B186A3F6C42F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.DistanceMeasure.Infrastructure.Shared", "Airport.DistanceMeasure.Infrastructure.Shared\Airport.DistanceMeasure.Infrastructure.Shared.csproj", "{505B844E-B357-45AF-9D42-FD0C3D099B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Airport.DistanceMeasure.Infrastructure.Shared", "Airport.DistanceMeasure.Infrastructure.Shared\Airport.DistanceMeasure.Infrastructure.Shared.csproj", "{505B844E-B357-45AF-9D42-FD0C3D099B08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{8475C3D1-E597-42D4-A13D-1DAD68CCA850}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{365E4CDE-786B-4B45-ADAB-D5D476859F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.DistanceMeasure.UnitTests", "Airport.DistanceMeasure.UnitTests\Airport.DistanceMeasure.UnitTests.csproj", "{756F6920-3620-45A2-811E-3232F0F9B2FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{505B844E-B357-45AF-9D42-FD0C3D099B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{505B844E-B357-45AF-9D42-FD0C3D099B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{505B844E-B357-45AF-9D42-FD0C3D099B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756F6920-3620-45A2-811E-3232F0F9B2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756F6920-3620-45A2-811E-3232F0F9B2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756F6920-3620-45A2-811E-3232F0F9B2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756F6920-3620-45A2-811E-3232F0F9B2FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,8 @@ Global
 		{CD17DF54-4738-4056-9A9C-B186A3F6C42F} = {21780340-66D9-4E08-A631-275C065641CD}
 		{505B844E-B357-45AF-9D42-FD0C3D099B08} = {CD17DF54-4738-4056-9A9C-B186A3F6C42F}
 		{8475C3D1-E597-42D4-A13D-1DAD68CCA850} = {21780340-66D9-4E08-A631-275C065641CD}
+		{365E4CDE-786B-4B45-ADAB-D5D476859F1B} = {21780340-66D9-4E08-A631-275C065641CD}
+		{756F6920-3620-45A2-811E-3232F0F9B2FE} = {365E4CDE-786B-4B45-ADAB-D5D476859F1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F070F4FB-BDCE-476A-A1EC-8268B21C7DBC}

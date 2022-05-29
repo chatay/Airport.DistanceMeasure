@@ -10,10 +10,10 @@ namespace Airport.DistanceMeasure.Application.DTOs
 {
     public class AirportIataCodesRequest
     {
-        [JsonProperty(PropertyName ="from")]
-        public string FromIataCode { get; set; }
+        [JsonProperty(PropertyName = "from")]
+        public string FromIataCode { get; set; } = string.Empty;
 
         [JsonProperty(PropertyName = "to")]
-        public string ToIataCode { get; set; }
+        public string ToIataCode { get; set; } = string.Empty;
     }
 }

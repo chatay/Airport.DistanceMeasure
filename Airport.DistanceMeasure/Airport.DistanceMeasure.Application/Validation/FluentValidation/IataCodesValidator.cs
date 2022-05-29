@@ -17,7 +17,7 @@ namespace Airport.DistanceMeasure.Application.Validation.FluentValidation
         {
             RuleFor(x => x.FromIataCode).IataCodeInput(toIataCode = false);
             RuleFor(x => x.ToIataCode).IataCodeInput(toIataCode = true);
-
+        
             RuleFor(x => new { x.FromIataCode, x.ToIataCode })
                 .Must(x => !x.FromIataCode.Equals(x.ToIataCode))
                 .WithMessage(ValidationMessages.FromAndDestinyEqualError);

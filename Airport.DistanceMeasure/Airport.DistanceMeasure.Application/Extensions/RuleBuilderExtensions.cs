@@ -14,7 +14,7 @@ namespace Airport.DistanceMeasure.Application.Extensions
         public static IRuleBuilder<T, string> IataCodeInput<T>(this IRuleBuilder<T, string> ruleBuilder, bool toIataCode)
         {
             var options = ruleBuilder
-                .NotEmpty().WithMessage(ValidationMessages.IataCodeIsEmpty)
+                .Empty().WithMessage(ValidationMessages.IataCodeIsEmpty)
                 .Must(IataCodeValidator.IsValid).WithMessage(toIataCode ? ValidationMessages.DestinyIataCodeNotValid : ValidationMessages.FromIataCodeNotValid)
                 .MinimumLength(3).WithMessage(ValidationMessages.IataCodeLengthNotValid)
                 .MaximumLength(3).WithMessage(ValidationMessages.IataCodeLengthNotValid);
